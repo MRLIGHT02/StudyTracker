@@ -54,7 +54,7 @@
             CornerRadius="24">
             <VerticalStackLayout>
                 <Label Text="Weekly Goal" />
-                <custom:CustomProgressBar Margin="-25,10,0,10" />
+                <custom:CustomProgressBar Margin="-28,10,0,10" />
                 <Label Text="15/20 hours" />
             </VerticalStackLayout>
         </Frame>
