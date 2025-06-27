@@ -1,8 +1,8 @@
 namespace StudyTracker.Views;
 
-public partial class HomePage : ContentPage
+public partial class GoalPage : ContentPage
 {
-	public HomePage()
+	public GoalPage()
 	{
 		InitializeComponent();
 	}
