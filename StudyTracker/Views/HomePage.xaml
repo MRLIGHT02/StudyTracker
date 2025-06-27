@@ -2,7 +2,8 @@
 <ContentPage
     x:Class="StudyTracker.Views.HomePage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:custom="clr-namespace:StudyTracker.CustomControls">
     <Grid BackgroundColor="#e1e4f2">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -47,14 +48,13 @@
         </Frame>
         <Frame
             Grid.Row="2"
-            BackgroundColor="#f0f1f5"
-            BorderColor="Transparent">
+            Margin="20"
+            BackgroundColor="White"
+            BorderColor="Transparent"
+            CornerRadius="24">
             <VerticalStackLayout>
                 <Label Text="Weekly Goal" />
-                <ProgressBar
-                    HeightRequest="20"
-                    Progress=".10"
-                    ProgressColor="Purple" />
+                <custom:CustomProgressBar Margin="-25,10,0,10" />
                 <Label Text="15/20 hours" />
             </VerticalStackLayout>
         </Frame>
