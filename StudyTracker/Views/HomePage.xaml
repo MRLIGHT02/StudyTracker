@@ -2,72 +2,137 @@
 <ContentPage
     x:Class="StudyTracker.Views.HomePage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="">
-    <Grid Margin="0,0,0,30" BackgroundColor="#074242">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Grid BackgroundColor="#e1e4f2">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
-
         </Grid.RowDefinitions>
-        <Label
-            Grid.Row="0"
-            Margin="0,0,-20,0"
-            FontAttributes="Bold"
-            FontSize="25"
-            HorizontalOptions="Center"
-            Text="Welcome Saif"
-            TextColor="White"
-            VerticalOptions="Center" />
+        <Frame
+            Margin="20,0,20,-30"
+            BackgroundColor="#e1e4f2"
+            BorderColor="Transparent">
+            <Label
+                FontAttributes="Bold"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="Welcome Saif"
+                TextColor="#23394a"
+                VerticalOptions="Center" />
+        </Frame>
         <Frame
             Grid.Row="1"
-            Grid.RowSpan="3"
-            Margin="20,0,20,0"
-            BackgroundColor="#f7fcfc"
+            Margin="20,-30,20,20"
+            BackgroundColor="White"
+            BorderColor="Transparent"
             CornerRadius="25">
             <VerticalStackLayout>
                 <Label
-                    Margin="10"
-                    FontSize="20"
+                    FontSize="25"
                     HorizontalOptions="Center"
-                    Text="Today's Study Hours" />
+                    Text="Today's Study Hours"
+                    TextColor="#081926"
+                    VerticalOptions="Center" />
                 <Label
-                    Margin="15"
-                    FontSize="40"
+                    Padding="20"
+                    FontAttributes="Bold"
+                    FontSize="50"
                     HorizontalOptions="Center"
-                    Text="3:40 AM"
-                    TextColor="Gray"
+                    Text="3h:40m"
+                    TextColor="#081926"
                     VerticalOptions="Center" />
             </VerticalStackLayout>
-
-
         </Frame>
         <Frame
-            Grid.Row="4"
-            Margin="20,30,20,20"
-            BackgroundColor="#f7fcfc"
-            CornerRadius="24">
-
+            Grid.Row="2"
+            BackgroundColor="#f0f1f5"
+            BorderColor="Transparent">
             <VerticalStackLayout>
-                <Label Text="Weekly Goals" />
+                <Label Text="Weekly Goal" />
                 <ProgressBar
-                    x:Name="WeeklyProgressBar"
                     HeightRequest="20"
-                    Progress=".40"
+                    Progress=".10"
                     ProgressColor="Purple" />
-                <Label Text="Progress 15/20" />
+                <Label Text="15/20 hours" />
             </VerticalStackLayout>
         </Frame>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
 
-        <Frame
-            Grid.Row="6"
-            Margin="20,50,20,20"
-            BackgroundColor="#f7fcfc"
-            CornerRadius="24" />
+            </Grid.ColumnDefinitions>
+            <Frame
+                Grid.Column="0"
+                Margin="20,45,10,20"
+                Padding="2"
+                BackgroundColor="White"
+                BorderColor="Transparent"
+                CornerRadius="25">
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <ImageButton
+                        Padding="4"
+                        BackgroundColor="Transparent"
+                        HeightRequest="20"
+                        Source="add.png"
+                        WidthRequest="50" />
+
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="10"
+                        HorizontalOptions="Center"
+                        Text="Add Session"
+                        TextColor="Black" />
+                </VerticalStackLayout>
+            </Frame>
+            <Frame
+                Grid.Column="1"
+                Margin="20,45,10,20"
+                Padding="5"
+                BackgroundColor="White"
+                CornerRadius="25">
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <ImageButton
+                        Padding="4"
+                        BackgroundColor="Transparent"
+                        HeightRequest="10"
+                        Source="timmer.png"
+                        WidthRequest="10" />
+
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="10"
+                        HorizontalOptions="Center"
+                        Text="Start Timmer"
+                        TextColor="Black" />
+                </VerticalStackLayout>
+            </Frame>
+            <Frame
+                Grid.Column="2"
+                Margin="20,45,10,20"
+                Padding="5"
+                BackgroundColor="White"
+                CornerRadius="25">
+
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <ImageButton
+                        Padding="4"
+                        BackgroundColor="Transparent"
+                        HeightRequest="10"
+                        Source="history.png"
+                        WidthRequest="10" />
+
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="10"
+                        HorizontalOptions="Center"
+                        Text="View History"
+                        TextColor="Black" />
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
     </Grid>
 </ContentPage>
