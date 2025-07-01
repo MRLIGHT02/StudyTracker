@@ -9,11 +9,17 @@
     <VerticalStackLayout>
 
         <Label
-            Margin="20,0,0,0"
+            Margin="20,20,10,10"
             FontAttributes="Bold"
             FontSize="16"
             Text="Subject" />
-
+        <entrycontrols:CustomEnteryBorder
+            Margin="20"
+            FontAttributes="Bold"
+            FontSize="16"
+            HeightRequest="30"
+            Placeholder="Subjects"
+            WidthRequest="300" />
 
         <Label
             Margin="20,0,0,0"
